@@ -1,0 +1,18 @@
+
+PLAY [network] ************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ****************************************************************************************************************************************************************************
+fatal: [spine01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.13 port 22: No route to host\r\n", "unreachable": true}
+fatal: [spine02]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.14 port 22: Connection timed out\r\n", "unreachable": true}
+fatal: [leaf03]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.15 port 22: Connection timed out\r\n", "unreachable": true}
+fatal: [leaf01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.11 port 22: Connection timed out\r\n", "unreachable": true}
+fatal: [leaf02]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.12 port 22: Connection timed out\r\n", "unreachable": true}
+	to retry, use: --limit @/root/sarth/Leaf_Spine/deploy_5-sw-leaf-spine.retry
+
+PLAY RECAP ****************************************************************************************************************************************************************************************
+leaf01                     : ok=0    changed=0    unreachable=1    failed=0   
+leaf02                     : ok=0    changed=0    unreachable=1    failed=0   
+leaf03                     : ok=0    changed=0    unreachable=1    failed=0   
+spine01                    : ok=0    changed=0    unreachable=1    failed=0   
+spine02                    : ok=0    changed=0    unreachable=1    failed=0   
+

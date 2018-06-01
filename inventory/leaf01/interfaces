@@ -1,0 +1,22 @@
+auto lo
+iface lo inet loopback
+    address 1.1.1.18/32
+
+auto eth0
+iface eth0 inet dhcp
+
+# uplinks
+auto swp5
+iface swp5
+    address 19.4.0.1/30
+
+auto swp6
+iface swp6
+    address 19.6.0.1/30
+
+# bridge to hosts
+auto swp7
+iface swp7
+    address 19.9.0.1/30
+    link-speed 10000
+
